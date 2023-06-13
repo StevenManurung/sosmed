@@ -30,12 +30,12 @@
 				<div class="tweet-show-popup-name">
 					<div class="t-s-p-n">
 					
-						<a href="'.BASE_URL.'profile.php?username='.$tweet->username.'">
+						<a href=<?= BASE_URL?><?="profile.php?username="?><?=$tweet->username?>>
 							<?php echo $tweet->screenName;?>
 						</a>
 					</div>
 					<div class="t-s-p-n-b">
-						<a href="'.BASE_URL.'profile.php?username='.$tweet->username.'">
+						<a href=<?=BASE_URL?><?="profile.php?username="?><?=$tweet->username?>>
 							@<?php echo $tweet->username;?>
 						</a>
 					</div>
