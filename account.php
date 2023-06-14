@@ -61,10 +61,10 @@ if ( isset( $_POST['submit'] ) ) {
 
             <div class='setting-head'>
                 <div class='account-text active'>
-                    <a class='bold' href='<?php echo BASE_URL?>settings/account'>Account</a>
+                    <a class='bold' href='<?php echo BASE_URL?>account.php'>Account</a>
                 </div>
                 <div class='password-text'>
-                    <a href='<?php echo BASE_URL;?>settings/password'>Password</a>
+                    <a href='<?php echo BASE_URL;?>password.php'>Password</a>
                 </div>
             </div>
 

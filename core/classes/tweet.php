@@ -218,7 +218,7 @@ class Tweet extends User{
         
         //$tweet = preg_replace("/#([\w]+)/", "<a href='http://localhost/twitter/hashtag/$1'>$0</a>", $tweet);		
         
-		$tweet = preg_replace("/#([\w]+)/", "<a href='http://localhost/sosmed/profile.php?username=$1'>$0</a>", $tweet);	
+		$tweet = preg_replace("/#([\w]+)/", "<a href='http://localhost/sosmed/hashtag.php?hashtag=$1'>$0</a>", $tweet);	
         
 		$tweet = preg_replace("/@([\w]+)/", "<a href='http://localhost/sosmed/profile.php?username=$1'>$0</a>", $tweet);
 		return $tweet;		
