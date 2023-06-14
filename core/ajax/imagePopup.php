@@ -27,7 +27,7 @@
 				</div>
 				<div class="img-popup-tweet-right">
 					<div class="img-popup-tweet-right-headline">
-						<a href="<?php echo BASE_URL.$tweet->username;?>"><?php echo $tweet->screenName;?></a><span>@<?php echo $tweet->username . ' - ' .$getFromU->timeAgo($tweet->postedOn)	;?></span>
+						<a href="<?php echo BASE_URL.'profile.php?username='.$tweet->username;?>"><?php echo $tweet->screenName;?></a><span>@<?php echo $tweet->username . ' - ' .$getFromU->timeAgo($tweet->postedOn)	;?></span>
 					</div>
 					<div class="img-popup-tweet-right-body">
 						<?php echo $getFromT->getTweetLinks($tweet->status);?>

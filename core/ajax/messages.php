@@ -61,7 +61,7 @@
 									<img src="<?php echo BASE_URL.$message->profileImage;?>"/>
 								</div>
 								<div class="name-right2">
-									<span><a href="#"><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
+									<span><a href=<?=BASE_URL.'profile.php?username='.$message->username?>><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
 								</div>
 								
 								<span>
@@ -105,7 +105,7 @@
 										<img src="<?php echo BASE_URL.$message->profileImage;?>"/>
 									</div>
 									<div class="name-right2">
-										<span><a href="#"><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
+										<span><a href=<?=BASE_URL.'profile.php?username='.$message->username?>><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
 									</div>
 									<div class="msg-box">
 										<?php echo $message->message;?>
