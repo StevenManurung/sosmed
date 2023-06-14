@@ -214,7 +214,7 @@ class Tweet extends User{
 	}
 
 	public function getTweetLinks($tweet){
-		$tweet = preg_replace("/(https?:\/\/)([\w]+.)([\w\.]+)/", "<a href='$0' target='_blink'>$0</a>", $tweet);
+		$tweet = preg_replace("/(https?:\/\/)([\w]+.)([\w\.]+)/", "<a href='$1' target='_blink'>$0</a>", $tweet);
         
         //$tweet = preg_replace("/#([\w]+)/", "<a href='http://localhost/twitter/hashtag/$1'>$0</a>", $tweet);		
         

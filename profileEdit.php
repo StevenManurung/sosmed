@@ -24,7 +24,7 @@
 				$error = "Country name is too long";
 			}else {
 				 $getFromU->update('users', $user_id, array('screenName' => $screenName, 'bio' => $profileBio, 'country' => $country, 'website' => $website));
-				 header('Location:'.$user->username);
+				 header('Location:profile.php?username='.$user->username);
 			}
 		}else{
 			$error = "Name field can't be blank";
@@ -35,7 +35,7 @@
 		if(!empty($_FILES['profileImage']['name'][0])){
 			$fileRoot  = $getFromU->uploadImage($_FILES['profileImage']);
 			$getFromU->update('users', $user_id, array('profileImage' => $fileRoot));
-			header('Location: profileEdit.php');
+			header('Location: profileEdit.php?username='.$user->username);
 		}
 	}
 
@@ -44,7 +44,7 @@
 		if(!empty($_FILES['profileCover']['name'][0])){
 			$fileRoot  = $getFromU->uploadImage($_FILES['profileCover']);
 			$getFromU->update('users', $user_id, array('profileCover' => $fileRoot));
-			header('Location: profileEdit.php');
+			header('Location: profileEdit.php?username='.$user->username);
 		}
 	}
 ?>

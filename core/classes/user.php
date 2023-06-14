@@ -185,7 +185,7 @@ class User{
  			$ext = explode('.', $filename);
 			$ext = strtolower(end($ext));
  			
- 			$allowed_extensions  = array('jpg','png','jpeg');
+ 			$allowed_extensions  = array('jpg','png','jpeg','jfif');
 		
 			if(in_array($ext, $allowed_extensions)){
 				
@@ -194,7 +194,7 @@ class User{
 					if($fileSize <= 2097152){
 
 		 				$root = 'users/' . $filename;
-					  	 move_uploaded_file($fileTmp,$_SERVER['DOCUMENT_ROOT'].'/twitter/'.$root);
+					  	 move_uploaded_file($fileTmp,$_SERVER['DOCUMENT_ROOT'].'/sosmed/'.$root);
 						 return $root;
 
 					}else{
