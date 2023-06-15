@@ -14,31 +14,32 @@ class Tweet extends User{
 	    $stmt->bindParam(":num", $num, PDO::PARAM_INT);
 	    $stmt->execute();
 	    $tweets = $stmt->fetchAll(PDO::FETCH_OBJ);
-
+	
 	    foreach ($tweets as $tweet) {
 	      $likes = $this->likes($user_id, $tweet->tweetID);
 	      $retweet = $this->checkRetweet($tweet->tweetID, $user_id);
 	      $user = $this->userData($tweet->retweetBy);
+			
  	      echo '<div class="all-tweet">
 			      <div class="t-show-wrap">
 			       <div class="t-show-inner">
-			       '.((isset($retweet['retweetID']) ? $retweet['retweetID'] === $tweet->retweetID OR $tweet->retweetID > 0 : '') ? '
+			       '.(( $tweet->retweetID > 0 ) ? '
 			      	<div class="t-show-banner">
 			      		<div class="t-show-banner-inner">
 			      			<span><i class="fa fa-retweet" aria-hidden="true"></i></span><span>'.$user->screenName.' Retweeted</span>
 			      		</div>
 			      	</div>'
 			        : '').'
-
-			        '.((!empty($tweet->retweetMsg) && $tweet->tweetID === $retweet['tweetID'] or $tweet->retweetID > 0) ? '<div class="t-show-head">
+					
+			        '.((!empty($tweet->retweetMsg) &&  $tweet?->retweetID > 0) ? '<div class="t-show-head">
 			        <div class="t-show-popup" data-tweet="'.$tweet->tweetID.'">
 			          <div class="t-show-img">
 			        		<img src="'.BASE_URL.$user->profileImage.'"/>
 			        	</div>
 			        	<div class="t-s-head-content">
 			        		<div class="t-h-c-name">
-			        			<span><a href="'.BASE_URL.'profile.php?username='.$user->username.'">'.$user->screenName.'</a></span>
-			        			<span>@'.$user->username.'</span>
+			        			<span><a href="'.BASE_URL.'profile.php?username='.$user->username.'">'.$user->screenName.'ssss</a></span>
+			        			<span>@s'.$user->username.'</span>
 			        			<span>'.$this->timeAgo($tweet->postedOn).'</span>
 
 			        		</div>
@@ -246,6 +247,7 @@ class Tweet extends User{
 		$this->message->sendNotification($get_id, $user_id, $tweet_id, 'retweet');
 
  	}
+
 
 	public function checkRetweet($tweet_id, $user_id){
 		$stmt = $this->pdo->prepare("SELECT * FROM `tweets` WHERE `retweetID` = :tweet_id AND `retweetBy` = :user_id or `tweetID` = :tweet_id and `retweetBy` = :user_id");

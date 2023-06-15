@@ -81,7 +81,9 @@ if ( isset( $_POST['tweet'] ) ) {
                             <form method='post' enctype='multipart/form-data'>
                                 <textarea class='status' maxlength='1000' name='status' placeholder="What's happening?" rows='3' cols='100%' style="font-size:17px;"></textarea>
                                 <div>
-                                <img id="output">
+                                <img width="500px" id="output">
+                                
+                                </img>
                                 </div>
                                 
                                <!--  <div class='hash-box'>
