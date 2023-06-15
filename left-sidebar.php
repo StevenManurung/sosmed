@@ -34,7 +34,7 @@
                 <li class="active_menu"><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home" style="color:#50b7f5;"></i><span style="color:#50b7f5;">Home</span></a></li>
                 <?php if ( $getFromU->loggedIn() === true ) {
                 ?>
-                <li><a href="<?php echo BASE_URL;?>hashtag.php"><i class="fa fa-hashtag"></i><span>Explore</span></a></li>
+               <!--  <li><a href="<?php echo BASE_URL;?>hashtag.php"><i class="fa fa-hashtag"></i><span>Explore</span></a></li> -->
 
                 <li><a href="<?php echo BASE_URL;?>notification.php"><i class="fa fa-bell" aria-hidden="true"></i><span>Notifications</span><span id="notificaiton" class="ml-0"><?php if($notify->totalN > 0){echo '<span class="span-i">'.$notify->totalN.'</span>';}?></span></a></li>
                 
@@ -53,7 +53,7 @@
                 <a href='<?php echo BASE_URL; ?>' style="text-decoration:none;"><li style="padding:10px 40px;"><button class="sidebar_tweet button" style="outline:none;">Login</button></li></a>
                 <?php }?>
             </ul>
-            <ul>
+         <!--    <ul>
                <?php if ( $getFromU->loggedIn() === true ) {
                 ?>
                 <div class="media" style="margin-top:150px;">
@@ -72,5 +72,5 @@
                     </li>
                 </div>
                 <?php } ?>
-            </ul>
+            </ul> -->
         </div>

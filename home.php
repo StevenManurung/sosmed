@@ -80,19 +80,22 @@ if ( isset( $_POST['tweet'] ) ) {
                         <div class='tweet_body'>
                             <form method='post' enctype='multipart/form-data'>
                                 <textarea class='status' maxlength='1000' name='status' placeholder="What's happening?" rows='3' cols='100%' style="font-size:17px;"></textarea>
-                                <div class='hash-box'>
-                                    <ul>
-                                    </ul>
+                                <div>
+                                <img id="output">
                                 </div>
+                                
+                               <!--  <div class='hash-box'>
+                                    <ul>
+                                    
+                                    </ul>
+                                </div> -->
 
                                 <div class='tweet_icons-wrapper'>
                                     <div class='t-fo-left tweet_icons-add'>
                                         <ul>
-                                            <input type='file' name='file' id='file' />
+                                            <input type='file' name='file' id='file' onchange="loadFile(event)" />
                                             <li><label for='file'><i class='fa fa-image' aria-hidden='true'></i></label>
-                                                <i class="fa fa-bar-chart"></i>
-                                                <i class="fa fa-smile-o"></i>
-                                                <i class="fa fa-calendar-o"></i>
+                                    
                                             </li>
                                             <span class='tweet-error'><?php if ( isset( $error ) ) {
                                                 echo $error;
@@ -100,7 +103,7 @@ if ( isset( $_POST['tweet'] ) ) {
                                                 echo '<br>' . $imgError;
                                             }
                                             ?></span>
-                                            <!--<i class="fa fa-image"></i>-->
+                                            
 
                                         </ul>
                                     </div>
@@ -156,6 +159,17 @@ if ( isset( $_POST['tweet'] ) ) {
     <script src='<?php echo BASE_URL; ?>assets/js/jquery-3.1.1.min.js'></script>
     <script src='<?php echo BASE_URL; ?>assets/js/popper.min.js'></script>
     <script src='<?php echo BASE_URL; ?>assets/js/bootstrap.min.js'></script>
+
+    <script>
+  var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+</script
 
 </body>
 
