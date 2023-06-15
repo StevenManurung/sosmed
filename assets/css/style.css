@@ -67,11 +67,40 @@ textarea {
     font-size: 30px !important;
 }
 
+
+
 .sidebar,
 .main {
     border-right: 1px solid var(--twitter-background);
 }
 
+.sidebar_profile-box{
+    width:100%;
+    display: flex;
+    border-radius: 15px;
+   border: thin 5px gray;
+    border-width: thin;
+    height: 70px;
+    
+}
+.sidebar_profile-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    height: 100%;
+}
+
+.sidebar_profile-info p{
+  
+    margin: 0;
+}
+.sidebar_profile-image{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 0;
+    margin: 0;
+}
 
 .grid-container {
     width: 100%;
@@ -158,6 +187,12 @@ textarea {
         text-align: center;
         padding: 15px 10px;
         display: block;
+    }
+    .sidebar_profile-info{
+        display: none;
+    }
+    .sidebar_profile-image{
+        border-radius: 50%;
     }
 
     .sidebar ul li a i {

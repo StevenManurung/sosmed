@@ -15,8 +15,22 @@
 
 ?>
            <div class="sidebar">
+            <div><i class="fa fa-twitter" style="color:#50b7f5;font-size:10px;"></i></div>
             <ul style="list-style:none;">
-                <li><i class="fa fa-twitter" style="color:#50b7f5;font-size:10px;"></i></li>
+                <li >
+                <a href="<?php echo BASE_URL; ?><?="profile.php?username="?><?php echo $user->username;?>" ?>
+                    <div class="sidebar_profile-box">
+                        <div style="margin-right: 5px;">
+                            <img class="sidebar_profile-image" width="60px" height="100%" src=<?= BASE_URL.$user->profileImage?> alt="">
+                        </div>
+                        <div class="sidebar_profile-info">
+                            <p><?=$user->screenName?></p>
+                            <p style="font-size: 10px;color:gray;">@<?=$user->username?></p>
+                        </div>
+                    </div>
+                    </a>
+            </li>
+           
                 <li class="active_menu"><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home" style="color:#50b7f5;"></i><span style="color:#50b7f5;">Home</span></a></li>
                 <?php if ( $getFromU->loggedIn() === true ) {
                 ?>
@@ -29,7 +43,7 @@
                             echo '<span class="span-i">'.$notify->totalM.'</span>';
                             }?>
                         </span></a></li>
-                <li><a href="<?php echo BASE_URL; ?><?="profile.php?username="?><?php echo $user->username; ?>"><i class="fa fa-user"></i><span>Profile</span></a></li>
+                <!-- <li><a href="<?php echo BASE_URL; ?><?="profile.php?username="?><?php echo $user->username; ?>"><i class="fa fa-user"></i><span>Profile</span></a></li> -->
                 <li><a href='<?php echo BASE_URL; ?>account.php'><i class="fa fa-cog"></i><span>Settings</span></a></li>
                 <li><a href='<?php echo BASE_URL; ?>includes/logout.php'><i class="fa fa-power-off"></i><span>Logout</span></a></li>
                 <li style="padding:10px 40px;"><button class="sidebar_tweet button addTweetBtn" style="outline:none;">Tweet</button></li>
