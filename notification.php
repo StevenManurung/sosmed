@@ -48,7 +48,7 @@
                     <!--NOTIFICATION WRAPPER FULL WRAPPER-->
                     <p class="page_title mb-0">Notifications</p>
                     <div class="notification-full-wrapper">
-
+<!-- 
                         <div class="notification-full-head">
                             <div>
                                 <a href="#">All</a>
@@ -59,7 +59,7 @@
                             <div>
                                 <a href="#">settings</a>
                             </div>
-                        </div>
+                        </div> -->
                         <?php foreach($notification as $data) :?>
                         <?php if($data->type == 'follow') :?>
                         <!-- Follow Notification -->

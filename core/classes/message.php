@@ -85,7 +85,7 @@
     }
 
     public function notification($user_id){
-      $stmt = $this->pdo->prepare("SELECT * FROM `notification` N LEFT JOIN `users` U ON N.`notificationFrom` = U.`user_id` LEFT JOIN `tweets` T ON N.`target` = T.`tweetID` LEFT JOIN `likes` L ON N.`target` = L.`likeOn` LEFT JOIN `follow` F ON N.`notificationFrom` = F.`sender` AND N.`notificationFor` = F.`receiver` WHERE N.`notificationFor` = :user_id AND N.`notificationFrom` != :user_id GROUP BY `ID` ");
+      $stmt = $this->pdo->prepare("SELECT * FROM `notification` N LEFT JOIN `users` U ON N.`notificationFrom` = U.`user_id` LEFT JOIN `tweets` T ON N.`target` = T.`tweetID` LEFT JOIN `likes` L ON N.`target` = L.`likeOn` LEFT JOIN `follow` F ON N.`notificationFrom` = F.`sender` AND N.`notificationFor` = F.`receiver` WHERE N.`notificationFor` = :user_id AND N.`notificationFrom` != :user_id GROUP BY `ID` ORDER BY N.`time` DESC");
       $stmt->execute(array("user_id" => $user_id));
       return $stmt->fetchAll(PDO::FETCH_OBJ);
     }

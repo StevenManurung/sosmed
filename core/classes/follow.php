@@ -74,6 +74,7 @@
 		$stmt = $this->pdo->prepare("SELECT * FROM `users` LEFT JOIN `follow` ON `receiver` = `user_id` AND CASE WHEN `sender` = :profileID THEN `receiver` = `user_id` END WHERE `sender` IS NOT NULL ");
 		$stmt->bindParam(":profileID", $profileID, PDO::PARAM_INT);
 		$stmt->execute();
+	
 		$followings = $stmt->fetchAll(PDO::FETCH_OBJ);
 		foreach ($followings as $following) {
 			echo '<div class="following-box">
@@ -158,9 +159,7 @@
 					</div>
 				</div>';
 		}
-		echo '<div class="trends_show-more">
-                    <a href="">Show more</a>
-                </div></div></div>';
+	
 	}
 
 }
