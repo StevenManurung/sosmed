@@ -67,7 +67,7 @@ if ( isset( $_POST['post'] ) ) {
             <div class=''>
                 <div class=''>
                     <!--POST WRAPPER-->
-                    <p class="page_title mb-0">Home</p>
+                    <p class="page_title mb-0" style="background-color: white; color: #333333;">Home</p>
                     <div class='post_box post_add'>
                         <div class='left-post ml-3'>
                             <!-- PROFILE-IMAGE -->
@@ -96,7 +96,7 @@ if ( isset( $_POST['post'] ) ) {
                                     <div class='t-fo-left post_icons-add'>
                                         <ul>
                                             <input type='file' name='file' id='file' onchange="loadFile(event)" />
-                                            <li><label for='file'><i class='fa fa-image' aria-hidden='true'></i></label>
+                                            <li><label for='file'><i class='fa fa-image' style="color: black;" aria-hidden='true'></i></label>
                                     
                                             </li>
                                             <span class='post-error'><?php if ( isset( $error ) ) {

@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET" && realpath(__FILE__) == realpath($_SERV
     <div class="top">
         <form method="post" autocomplete="off">
         
-        <h1 class="mb-4 " style="text-align:center;">Log in to twitter</h1>
+        <h1 class="mb-4 " style="text-align:center; font-size: 22px">Log in</h1>
         <div class="form-group  form-row">
             <input class="form-control col-4 mr-3 ml-5 mt-1 p-3" name="email" type="text" placeholder="Email" style="height:50px;" />
             <input class="form-control col-4 mr-3 mt-1 p-3" name="password" type="password" placeholder="Password" style="height:50px;"/>

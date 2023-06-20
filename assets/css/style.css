@@ -74,7 +74,7 @@ textarea {
 }
 
 .sidebar{
-     background-color: #ffe200;
+     background-color: white;
      border-top-left-radius: 20px;
      border-bottom-left-radius: 20px;
 }
@@ -146,14 +146,14 @@ textarea {
     font-size: 20px;
     padding: 15px 20px;
     border-bottom: 1px solid var(--twitter-background);
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     position: sticky;
     top: 0;
     z-index: 999;
 }
 .page_title i{
-    color: white;
+    color: black;
 }
 
 .dropbtn {
@@ -318,7 +318,7 @@ textarea {
     margin-top: 10px;
     padding: 10px 15px;
     border-radius: 50px;
-    background:red;
+    background: black;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -328,7 +328,7 @@ textarea {
 }
 
 .button_post:hover {
-    background: #4cade9;
+    filter: brightness(0.7);
 }
 
 .post_icons-add i {
@@ -398,7 +398,7 @@ textarea {
 }
 
 .sidebar ul .active_menu {
-    color: white;
+    color: black;
 }
 
 .sidebar ul li .button:hover {
@@ -446,7 +446,7 @@ textarea {
 
 .right_sidebar {
     position: sticky;
-    top 0;
+    top: 0;
     height: 100vh;
 }
 
@@ -553,7 +553,7 @@ textarea {
 }
 
 .main-box .left {
-    background: url(../images/bird.svg) #1da1f2 no-repeat;
+    background: url(../images/bird.svg) black no-repeat;
     background-size: cover;
     display: flex;
 }
@@ -645,6 +645,7 @@ textarea {
     width: 70%;
     margin: auto;
     margin-top: 20%;
+    text-align: center;
 /*    background: green;*/
 }
 
@@ -662,8 +663,8 @@ textarea {
 .main-box .middle .btn-sign-up {
     display: block;
     margin-bottom: 15px;
-    background-color: #1da1f2;
-    border: 1px solid #1da1f2;
+    background-color: black;
+    border: 1px solid black;
     color: #fff;
     border-radius: 100px;
     padding: 6px 16px;
@@ -678,7 +679,7 @@ textarea {
 }
 
 .main-box .middle .icon.icon--bird {
-    color: #1da1f2;
+    color: black;
     font-size: 45px;
     margin-bottom: 8px;
 }
@@ -688,9 +689,9 @@ input[type="text"] {
   border: 1px solid #e6ecf0;
   border-radius: 3px;
   padding: 12px;
-  display: block;
+  display: block;}
 */
-}
+
 
 .input-group {
     /*  margin-right: 12px;*/
@@ -703,8 +704,8 @@ input[type="text"] {
 
 .btn-login {
     background-color: #fff;
-    border: 1px solid #1da1f2;
-    color: #1da1f2;
+    border: 1px solid black;
+    color: black;
     border-radius: 100px;
     padding: 12px;
     font-size: 14px;
@@ -718,7 +719,7 @@ input[type="text"] {
 
 .btn-login:hover {
     background-color: #eaf5fd;
-    color: #1da1f2;
+    color: black;
 }
 
 .footer .nav ul {

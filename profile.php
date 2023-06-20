@@ -23,7 +23,7 @@ include 'core/init.php';
     <title><?php echo $profileData->screenName.' (@'.$profileData->username.')'; ?></title>
     <meta charset="UTF-8" />
     
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/bird.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/saveyu.svg">
     
       	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
     <link rel='stylesheet' href='<?php echo BASE_URL; ?>assets/css/style-complete.css' />
@@ -44,7 +44,7 @@ include 'core/init.php';
             <div class=''>
                 <div class=''>
                     <!--POST WRAPPER-->
-                    <p class="page_title mb-0"><i class="fa fa-arrow-left mr-4" style="color:#50b7f5;"></i><?php echo $profileData->username; ?></p>
+                    <p class="page_title mb-0"><i class="fa fa-arrow-left mr-4" style="color:black;"></i><?php echo $profileData->username; ?></p>
                     <div class='profile-box'>
                         <div class='profile-cover mt-0'>
                             <!-- PROFILE-IMAGE -->
