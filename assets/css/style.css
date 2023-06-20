@@ -200,7 +200,7 @@ textarea {
     }
 
     .sidebar ul li span,
-    .sidebar_tweet,
+    .sidebar_post,
     .right_sidebar {
         display: none;
     }
@@ -224,48 +224,48 @@ textarea {
 
 }
 
-/*----------------------Tweet_box css-------------------------------------*/
+/*----------------------post_box css-------------------------------------*/
 
 
-.tweet_del {
+.post_del {
     display: flex;
     justify-content: flex-end;
 }
 
-.tweet_box {
+.post_box {
     padding: 20px 15px 0px 0px;
     border-bottom: 1px solid var(--twitter-background);
     display: flex;
 }
 
-.tweet_body {
+.post_body {
     width: 100%;
 }
 
-.tweet_add {
+.post_add {
     border-bottom: 1px solid var(--twitter-background);
 }
 
-.tweet_header {
+.post_header {
     display: flex;
     margin-bottom: 5px;
 }
 
-.tweet_name {
+.post_name {
     font-weight: 700;
 }
 
-.tweet_username,
-.tweet_date {
+.post_username,
+.post_date {
     color: rgb(101, 119, 134);
     font-size: 15px;
 }
 
-.tweet_header p {
+.post_header p {
     margin-right: 5px;
 }
 
-.tweet-left img {
+.post-left img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -273,7 +273,7 @@ textarea {
     margin: 0 20px;
 }
 
-.tweet_icons {
+.post_icons {
     width: 100%;
     max-width: 400px;
     display: flex;
@@ -281,15 +281,15 @@ textarea {
     margin-top: 10px;
 }
 
-.tweet_icons i {
+.post_icons i {
     color: #c6cacc;
 }
 
-.tweet_icons-wrapper {
+.post_icons-wrapper {
     display: flex;
 }
 
-.tweet_icons-add {
+.post_icons-add {
     width: 100%;
     display: flex;
     margin-top: 10px;
@@ -297,7 +297,7 @@ textarea {
 
 }
 
-.button_tweet {
+.button_post {
     margin-top: 10px;
     padding: 10px 15px;
     border-radius: 50px;
@@ -310,11 +310,11 @@ textarea {
     cursor: pointer;
 }
 
-.button_tweet:hover {
+.button_post:hover {
     background: #4cade9;
 }
 
-.tweet_icons-add i {
+.post_icons-add i {
     color: var(--twitter-color);
     font-size: 23px;
     margin-right: 15px;
@@ -323,7 +323,7 @@ textarea {
 
 /*-------------------------left-sidebar css--------------------------------*/
 
-.sidebar_tweet {
+.sidebar_post {
     background-color: var(--twitter-color);
     border: none;
     color: #fff;

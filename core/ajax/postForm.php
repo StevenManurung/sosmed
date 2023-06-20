@@ -4,7 +4,7 @@
 
 ?>
  <!-- POPUP TWEET-FORM WRAP -->
-<div class="popup-tweet-wrap">
+<div class="popup-post-wrap">
 		<div class="wrap">
 		
 		<div class="popwrap-inner">
@@ -13,12 +13,12 @@
 					<h4></h4>
 				</div>
 				<span class="popwrap-h-right">
-					<label class="closeTweetPopup" for="pop-up-tweet" ><i class="fa fa-times" aria-hidden="true" style="outline:none;"></i></label>
+					<label class="closePostPopup" for="pop-up-post" ><i class="fa fa-times" aria-hidden="true" style="outline:none;"></i></label>
 				</span>
 			</div>
-			<div class="popwrap-full tweet_body">
+			<div class="popwrap-full post_body">
 <!--
-			<div class='left-tweet'>
+			<div class='left-post'>
                              PROFILE-IMAGE 
                             <img class="ml-3" src="<?php echo $user->profileImage; ?>" style="width: 53px;height:53px;border-radius:50%;" />
                         </div>
@@ -30,8 +30,8 @@
                                     </ul>
                                 </div>
 
-                                <div class='tweet_icons-wrapper'>
-                                    <div class='t-fo-left tweet_icons-add'>
+                                <div class='post_icons-wrapper'>
+                                    <div class='t-fo-left post_icons-add'>
                                         <ul>
                                             <input type='file' name='file' id='file' />
                                             <li><label for='file'><i class='fa fa-image' aria-hidden='true'></i></label>
@@ -39,7 +39,7 @@
                                                 <i class="fa fa-smile-o"></i>
                                                 <i class="fa fa-calendar-o"></i>
                                             </li>
-                                            <span class='tweet-error'><?php if ( isset( $error ) ) {
+                                            <span class='post-error'><?php if ( isset( $error ) ) {
                                                 echo $error;
                                             } else if ( isset( $imgError ) ) {
                                                 echo '<br>' . $imgError;
@@ -51,9 +51,9 @@
                                     </div>
                                     <div class='t-fo-right'>
                                         <!--<span id='count'>140</span>-->
-                                        <!--<input type='submit' name='tweet' value='tweet' />-->
+                                        <!--<input type='submit' name='post' value='post' />-->
 
-                                        <button class="button_tweet" type="submit" name="tweet" style="outline:none;">Tweet</button>
+                                        <button class="button_post" type="submit" name="post" style="outline:none;">Post</button>
 
                                     </div>
                             </form>

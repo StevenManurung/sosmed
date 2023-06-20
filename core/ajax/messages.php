@@ -29,7 +29,7 @@
 		$getFromM->messagesViewed($user_id);
   		?>
 		<div class="popup-message-wrap">
-			<input id="popup-message-tweet" type="checkbox" checked="unchecked"/>
+			<input id="popup-message-post" type="checkbox" checked="unchecked"/>
 			<div class="wrap2">
 			<div class="message-send">
 				<div class="message-header">
@@ -40,7 +40,7 @@
 						<h4>New message</h4>
 					</div>
 					<div class="message-h-right">
-						<label for="popup-message-tweet" ><i class="fa fa-times" aria-hidden="true"></i></label>
+						<label for="popup-message-post" ><i class="fa fa-times" aria-hidden="true"></i></label>
 					</div>
 				</div>
 				<div class="form-group p-2">
@@ -65,7 +65,7 @@
 								</div>
 								
 								<span>
-									<?php echo $getFromU->timeAgo($message->messageOn);?>
+									<?php echo $getFromU->timeAgo($message->messageOn);?> 
 								</span>
 							</div>
 						</div>
@@ -92,7 +92,7 @@
 						</div>
 						<div class="back-right">
 							<label for="mass"  class="new-message-btn">New messages</label>
-							<label for="popup-message-tweet"><i class="fa fa-times" aria-hidden="true"></i></label>
+							<label for="popup-message-post"><i class="fa fa-times" aria-hidden="true"></i></label>
 						</div>
 					</div>
 					<div class="back-inner">
@@ -135,7 +135,7 @@
 		$user        = $getFromU->userData($messageFrom);
 		?>
 		<div class="popup-message-body-wrap">
-			<input id="popup-message-tweet" type="checkbox" checked="unchecked"/>
+			<input id="popup-message-post" type="checkbox" checked="unchecked"/>
 			<input id="message-body" type="checkbox" checked="unchecked"/>
 			<div class="wrap3">
 			<div class="message-send2">
@@ -167,14 +167,14 @@
 				</div>
 				<div class="main-msg-wrap">
 			      <div id="chat" class="main-msg-inner">
-			     
+			     	
 			 	  </div>
 				</div>
 				<div class="main-msg-footer">
 					<div class="main-msg-footer-inner form-group">
 						<ul>
 							<li><textarea class="form-control" id="msg" name="msg" cols="100%" placeholder="Write some thing!"></textarea></li>
-							<li><input id="msg-upload" type="file" value="upload"/><label for="msg-upload"><i class="fa fa-camera mt-2" aria-hidden="true"></i></label></li>
+						
 							<li><input class="mt-2"id="send" data-user="<?php echo $messageFrom;?>" type="submit" value="Send"/></li>
 						</ul>
 					</div>

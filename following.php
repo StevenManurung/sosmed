@@ -45,7 +45,7 @@
         <div class="main">
             <div class=''>
                 <div class=''>
-                    <!--TWEET WRAPPER-->
+                    <!--POST WRAPPER-->
                     <p class="page_title mb-0"><i class="fa fa-arrow-left mr-4" style="color:#50b7f5;"></i><?php echo $user->username; ?></p>
                     <div class='profile-box'>
                         <div class='profile-cover mt-0'>
@@ -69,7 +69,7 @@
                                     <h6 class="mt-0" style="color:rgb(91, 112, 131);"><?php echo '@' . $user->username; ?></h6>
                                 </div>
                                 <div class="profile-bio">
-                                    <h5><?php echo $getFromT->getTweetLinks($profileData->bio); ?></h5>
+                                    <h5><?php echo $getFromT->getPostLinks($profileData->bio); ?></h5>
                                 </div>
                                 <div class="profile-link d-flex mt-3">
                                     <?php if(!empty($profileData->website)){ ?>
@@ -90,26 +90,26 @@
                                             Followers
                                         </a></h6>
                                     <h6 style="font-weight: 700;">
-                                        <?php echo $getFromT->countTweets($profileId); ?>
-                                        <a style="color:rgb(91, 112, 131);">Tweets</a></h6>
+                                        <?php echo $getFromT->countPosts($profileId); ?>
+                                        <a style="color:rgb(91, 112, 131);">Posts</a></h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="space" style="height:10px; width:100%; background:rgba(230, 236, 240, 0.5);">
                     </div>
-                    <!--TWEET WRAP END-->
+                    <!--POST WRAP END-->
                     
                     <div class="following-box">
                         <?php $getFromF->followingList($profileId, $user_id, $profileData->user_id);?>
                     </div>
 
-                    <div class="popupTweet"></div>
+                    <div class="popupPost"></div>
                    
-                    <!--Tweet END WRAPER-->
+                    <!--Post END WRAPER-->
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/like.js'></script>
-                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/retweet.js'></script>
-                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/popuptweets.js'></script>
+                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/repost.js'></script>
+                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/popupposts.js'></script>
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/delete.js'></script>
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/comment.js'></script>
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/popupForm.js'></script>

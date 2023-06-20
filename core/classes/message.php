@@ -31,7 +31,7 @@
                   </div>
                 </div>
                 <div class="msg-btn">
-                  <a><i class="fa fa-ban" aria-hidden="true"></i></a>
+                 
                   <a class="deleteMsg" data-message="'.$message->messageID.'"><i class="fa fa-trash" aria-hidden="true"></i></a>
                 </div>
               </div>
@@ -40,17 +40,14 @@
           echo '<div class="main-msg-body-left">
             <div class="main-msg-l">
               <div class="msg-img-l">
-                <a href="#"><img src="'.BASE_URL.$message->profileImage.'"/></a>
+                <a href="'.BASE_URL.'profile.php?username='.$message->username.'"><img src="'.BASE_URL.$message->profileImage.'"/></a>
               </div>
               <div class="msg-l">'.$message->message.'
                 <div class="msg-time-l">
                     '.$this->timeAgo($message->messageOn).'
                 </div>
               </div>
-              <div class="msg-btn-l">
-                <a><i class="fa fa-ban" aria-hidden="true"></i></a>
-                <a class="deleteMsg" data-message="'.$message->messageID.'"><i class="fa fa-trash" aria-hidden="true"></i></a>
-              </div>
+           
             </div>
           </div> ';
         }
@@ -85,7 +82,7 @@
     }
 
     public function notification($user_id){
-      $stmt = $this->pdo->prepare("SELECT * FROM `notification` N LEFT JOIN `users` U ON N.`notificationFrom` = U.`user_id` LEFT JOIN `tweets` T ON N.`target` = T.`tweetID` LEFT JOIN `likes` L ON N.`target` = L.`likeOn` LEFT JOIN `follow` F ON N.`notificationFrom` = F.`sender` AND N.`notificationFor` = F.`receiver` WHERE N.`notificationFor` = :user_id AND N.`notificationFrom` != :user_id GROUP BY `ID` ORDER BY N.`time` DESC");
+      $stmt = $this->pdo->prepare("SELECT * FROM `notification` N LEFT JOIN `users` U ON N.`notificationFrom` = U.`user_id` LEFT JOIN `posts` T ON N.`target` = T.`postID` LEFT JOIN `likes` L ON N.`target` = L.`likeOn` LEFT JOIN `follow` F ON N.`notificationFrom` = F.`sender` AND N.`notificationFor` = F.`receiver` WHERE N.`notificationFor` = :user_id AND N.`notificationFrom` != :user_id GROUP BY `ID` ORDER BY N.`time` DESC");
       $stmt->execute(array("user_id" => $user_id));
       return $stmt->fetchAll(PDO::FETCH_OBJ);
     }

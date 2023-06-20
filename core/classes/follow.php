@@ -95,13 +95,10 @@
 								 '.$this->followBtn($following->user_id, $user_id, $followID).'
 						    </div>
 						</div>
-						<div class="follow-person-bio ml-5 mb-3">
-							<div class="follow-person-dis ml-4">
-								'.Tweet::getTweetLinks($following->bio).'
-							</div>
-						</div>
+					
 					</div>
-				</div></div>';
+				</div>
+			</div>';
 		}
         echo '<div class="space"style="height:10px; width:100%; background:rgba(230, 236, 240, 0.5);"></div>';
 	}
@@ -131,7 +128,7 @@
 						</div>
 						<div class="follow-person-bio ml-5 mb-3">
 							<div class="follow-person-dis ml-4">
-								'.Tweet::getTweetLinks($following->bio).'
+								'.Post::getPostLinks($following->bio).'
 							</div>
 						</div>
 					</div>

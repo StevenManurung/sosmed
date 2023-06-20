@@ -15,7 +15,7 @@
 <html>
 
 <head>
-    <title>Notifications - Twitter</title>
+    <title>Notifications - Dreamify</title>
     <meta charset="UTF-8" />
     
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/images/bird.svg">
@@ -38,7 +38,7 @@
 
         <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/search.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/like.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/retweet.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/repost.js"></script>
 
 
         <div class="main">
@@ -79,8 +79,8 @@
                                         </div>
 
                                     </div>
-                                    <div class="notification-tweet">
-                                        <a href="<?php echo BASE_URL.$data->username;?>" class="notifi-name"><?php echo $data->screenName;?></a><span> Followed you - <span><?php echo $getFromU->timeAgo($data->time);?></span>
+                                    <div class="notification-post">
+                                        <a href="<?php echo BASE_URL.'profile.php?username='.$data->username;?>" class="notifi-name"><?php echo $data->screenName;?></a><span> Followed you - <span><?php echo $getFromU->timeAgo($data->time);?></span>
 
                                     </div>
 
@@ -110,8 +110,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="notification-tweet">
-                                    <a href="<?php echo BASE_URL.$data->profileImage;?>" class="notifi-name"><?php echo $data->screenName;?></a><span> liked your <?php if($data->tweetBy === $user_id){echo 'Tweet';}else{echo 'Retweet';}?> - <span><?php echo $getFromU->timeAgo($data->time);?></span>
+                                <div class="notification-post">
+                                    <a href="<?php echo BASE_URL.'profile.php?username='.$data->username;?>" class="notifi-name"><?php echo $data->screenName;?></a><span> liked your <?php if($data->postBy === $user_id){echo 'Post';}else{echo 'Repost';}?> - <span><?php echo $getFromU->timeAgo($data->time);?></span>
                                 </div>
                                 <div class="notification-footer">
                                     <div class="noti-footer-inner">
@@ -122,12 +122,12 @@
                                                 <span><?php echo $getFromU->timeAgo($data->postedOn);?></span>
                                             </div>
                                             <div class="noti-footer-inner-right-text">
-                                                <?php echo $getFromT->getTweetlinks($data->status);?>
+                                                <?php echo $getFromT->getPostlinks($data->status);?>
                                             </div>
                                         </div>
-                                        <?php if(!empty($data->tweetImage)) :?>
+                                        <?php if(!empty($data->postImage)) :?>
                                         <div class="noti-footer-inner-right">
-                                            <img src="<?php echo BASE_URL.$data->tweetImage;?>" />
+                                            <img src="<?php echo BASE_URL.$data->postImage;?>" />
                                         </div>
                                         <?php endif;?>
 
@@ -140,39 +140,39 @@
                         <!-- Like Notification -->
                         <?php endif;?>
 
-                        <?php if($data->type == 'retweet') :?>
-                        <!-- Retweet Notification -->
+                        <?php if($data->type == 'repost') :?>
+                        <!-- Repost Notification -->
                         <!--NOTIFICATION WRAPPER-->
                         <div class="notification-wrapper">
                             <div class="notification-inner">
                                 <div class="notification-header">
 
                                     <div class="notification-img">
-                                        <span class="retweet-logo">
-                                            <i class="fa fa-retweet" aria-hidden="true"></i>
+                                        <span class="repost-logo">
+                                            <i class="fa fa-repost" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <div class="notification-tweet">
-                                        <a href="<?php echo BASE_URL.$data->username;?>" class="notifi-name"><?php echo $data->screenName;?></a><span> retweet your <?php if($data->tweetBy === $user_id){echo 'Tweet';}else{echo 'Retweet';}?> - <span><?php echo $getFromU->timeAgo($data->time);?></span>
+                                    <div class="notification-post">
+                                        <a href="<?php echo BASE_URL.'profile.php?username='.$data->username;?>" class="notifi-name"><?php echo $data->screenName;?></a><span> repost your <?php if($data->postBy === $user_id){echo 'Post';}else{echo 'Repost';}?> - <span><?php echo $getFromU->timeAgo($data->time);?></span>
                                     </div>
                                     <div class="notification-footer">
                                         <div class="noti-footer-inner">
 
                                             <div class="noti-footer-inner-left">
                                                 <div class="t-h-c-name">
-                                                    <span><a href="<?php echo BASE_URL.$user->username;?>"><?php echo $user->screenName;?></a></span>
+                                                    <span><a href="<?php echo BASE_URL.'profile.php?username='.$user->username;?>"><?php echo $user->screenName;?></a></span>
                                                     <span>@<?php echo $user->username;?></span>
                                                     <span><?php echo $getFromU->timeAgo($data->postedOn);?></span>
                                                 </div>
                                                 <div class="noti-footer-inner-right-text">
-                                                    <?php echo $getFromT->getTweetLinks($data->status)?>
+                                                    <?php echo $getFromT->getPostLinks($data->status)?>
                                                 </div>
                                             </div>
 
 
-                                            <?php if(!empty($data->tweetImage)) :?>
+                                            <?php if(!empty($data->postImage)) :?>
                                             <div class="noti-footer-inner-right">
-                                                <img src="<?php echo BASE_URL.$data->tweetImage;?>" />
+                                                <img src="<?php echo BASE_URL.$data->postImage;?>" />
                                             </div>
                                             <?php endif;?>
 
@@ -183,39 +183,39 @@
                             </div>
                         </div>
                         <!--NOTIFICATION WRAPPER END-->
-                        <!-- Retweet Notification -->
+                        <!-- Repost Notification -->
                         <?php endif;?>
 
                         <?php if($data->type == 'mention') :?>
                         <?php 
-			$tweet = $data;
-			$likes        = $getFromT->likes($user_id, $tweet->tweetID);
-			$retweet      = $getFromT->checkRetweet($tweet->tweetID, $user_id);
-    			echo '<div class="all-tweet-inner">
+			$post = $data;
+			$likes        = $getFromT->likes($user_id, $post->postID);
+			$repost      = $getFromT->checkRepost($post->postID, $user_id);
+    			echo '<div class="all-post-inner">
 					<div class="t-show-wrap">	
 					 <div class="t-show-inner"> 
-							<div class="t-show-popup" data-tweet="'.$tweet->tweetID.'" data-user="'.$tweet->tweetBy.'">
+							<div class="t-show-popup" data-post="'.$post->postID.'" data-user="'.$post->postBy.'">
 								<div class="t-show-head">
 									<div class="t-show-img">
-										<img src="'.BASE_URL.$tweet->profileImage.'"/>
+										<img src="'.BASE_URL.$post->profileImage.'"/>
 									</div>
 									<div class="t-s-head-co	ntent">
 										<div class="t-h-c-name">
-											<span><a href="'.BASE_URL.$tweet->username.'">'.$tweet->screenName.'</a></span>
+											<span><a href="'.BASE_URL.$post->username.'">'.$post->screenName.'</a></span>
 											<span>Mentioned you - </span>
-											<span>'.$getFromT->timeAgo($tweet->postedOn).'</span>
+											<span>'.$getFromT->timeAgo($post->postedOn).'</span>
 										</div>
 										<div class="t-h-c-dis">
-											'.$getFromT->getTweetLinks($tweet->status).'
+											'.$getFromT->getPostLinks($post->status).'
 										</div>
 									</div>
 								</div>'.
 
-						 ((!empty($tweet->tweetImage)) ?  
+						 ((!empty($post->postImage)) ?  
 					       '<div class="t-show-body">
 								  <div class="t-s-b-inner">
 									   <div class="t-s-b-inner-in">
-									     <img src="'.BASE_URL.$tweet->tweetImage.'" class="imagePopup" data-tweet="'.$tweet->tweetID.'" data-user="'.$tweet->tweetBy.'"/>
+									     <img src="'.BASE_URL.$post->postImage.'" class="imagePopup" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"/>
 									   </div>
 								  </div>	
 							   </div>' : '' ) .'
@@ -224,14 +224,14 @@
 						<div class="t-show-footer">
 							<div class="t-s-f-right">
 								<ul> 
-									<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>	
-									<li>'.(((isset($retweet['retweetID'])) ? $tweet->tweetID === $retweet['retweetID'] OR $user_id === $retweet['retweetBy'] : '') ? '<button class="retweeted" data-tweet="'.$tweet->tweetID.'" data-user="'.$tweet->tweetBy.'"><i class="fa fa-retweet" aria-hidden="true"></i><span class="retweetsCount">'.(($tweet->retweetCount > 0) ? $tweet->retweetCount : '').'</span></button>' : '<button class="retweet" data-tweet="'.$tweet->tweetID.'" data-user="'.$tweet->tweetBy.'"><i class="fa fa-retweet" aria-hidden="true"></i><span class="retweetsCount">'.(($tweet->retweetCount > 0) ? $tweet->retweetCount : '').'</span></button>').'</li>
-									<li>'.(((isset($likes['likeOn'])) ?$likes['likeOn'] == $tweet->tweetID : '') ? '<button class="unlike-btn" data-tweet="'.$tweet->tweetID.'" data-user="'.$tweet->tweetBy.'"><i class="fa fa-heart" aria-hidden="true"></i><span class="likesCounter">'.(($tweet->likesCount > 0) ? $tweet->likesCount : '').'</span></button>' : '<button class="like-btn" data-tweet="'.$tweet->tweetID.'" data-user="'.$tweet->tweetBy.'"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="likesCounter">'.(($tweet->likesCount > 0) ? $tweet->likesCount : '').'</span></button>').'</li>
-									'.(($tweet->tweetBy === $user_id) ? ' 
+								
+									<li>'.(((isset($repost['repostID'])) ? $post->postID === $repost['repostID'] OR $user_id === $repost['repostBy'] : '') ? '<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>' : '<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'</li>
+									<li>'.(((isset($likes['likeOn'])) ?$likes['likeOn'] == $post->postID : '') ? '<button class="unlike-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>' : '<button class="like-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>').'</li>
+									'.(($post->postBy === $user_id) ? ' 
 									<li>
 										<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
 										<ul> 
-										  <li><label class="deleteTweet" data-tweet="'.$tweet->tweetID.'">Delete Tweet</label></li>
+										  <li><label class="deletePost" data-post="'.$post->postID.'">Delete Post</label></li>
 										</ul>
 									</li>' : '').'
 								</ul>
@@ -249,9 +249,9 @@
                     <div class="loading-div">
                         <img id="loader" src="<?php echo BASE_URL;?>assets/images/loading.svg" style="display: none;" />
                     </div>
-                    <div class="popupTweet"></div>
-                    <!--Tweet END WRAPER-->
-                    <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/popuptweets.js"></script>
+                    <div class="popupPost"></div>
+                    <!--Post END WRAPER-->
+                    <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/popupposts.js"></script>
                     <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/hashtag.js"></script>
                     <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/delete.js"></script>
                     <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/popupForm.js"></script>

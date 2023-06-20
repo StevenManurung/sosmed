@@ -8,7 +8,7 @@
 <html>
 
 <head>
-    <title>Twitter</title>
+    <title>Dreamify</title>
     <meta charset="UTF-8" />
     
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
@@ -68,7 +68,7 @@
                         <div class="middle">
                             <i class="fa fa-twitter" style="font-size:50px;"></i>
                             <h1>See what's happening in<br />the world right now</h1>
-                            <span>Join Twitter today.</span>
+                            <span>Join Dreamify today.</span>
                         </div>
 
                         <?php include 'includes/signup-form.php';?>

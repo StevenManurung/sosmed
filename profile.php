@@ -43,7 +43,7 @@ include 'core/init.php';
         <div class="main">
             <div class=''>
                 <div class=''>
-                    <!--TWEET WRAPPER-->
+                    <!--POST WRAPPER-->
                     <p class="page_title mb-0"><i class="fa fa-arrow-left mr-4" style="color:#50b7f5;"></i><?php echo $profileData->username; ?></p>
                     <div class='profile-box'>
                         <div class='profile-cover mt-0'>
@@ -67,7 +67,7 @@ include 'core/init.php';
                                     <h6 class="mt-0" style="color:rgb(91, 112, 131);"><?php echo '@' . $profileData->username; ?></h6>
                                 </div>
                                 <div class="profile-bio">
-                                    <h5><?php echo $getFromT->getTweetLinks($profileData->bio); ?></h5>
+                                    <h5><?php echo $getFromT->getPostLinks($profileData->bio); ?></h5>
                                 </div>
                                 <div class="profile-link d-flex mt-3">
                                     <?php if(!empty($profileData->website)){ ?>
@@ -80,39 +80,39 @@ include 'core/init.php';
                                 </div>
                                 <div class="profile-follow mt-2 d-flex">
                                     <h6 class="mr-3 ml-1" style="font-weight: 700;"><?php echo $profileData->following; ?>
-                                        <a href="<?php echo BASE_URL.$profileData->username; ?>/following">
-                                            <a href="<?php echo BASE_URL.$profileData->username; ?>/following" style="color:rgb(91, 112, 131);">Following</a>
+                                        <a href="<?php echo BASE_URL.'profile.php?username='.$profileData->username; ?>">
+                                            <a href="<?php echo BASE_URL.'following.php?username='.$profileData->username; ?>" style="color:rgb(91, 112, 131);">Following</a>
                                         </a></h6>
                                     <h6 class="mr-3"style="font-weight: 700;"><?php echo $profileData->followers; ?>
-                                    <a href="<?php echo BASE_URL.$profileData->username; ?>/followers"style="color:rgb(91, 112, 131);">
+                                    <a href="<?php echo BASE_URL.'followers.php?username='.$profileData->username; ?>"style="color:rgb(91, 112, 131);">
                                         Followers
                                     </a></h6>
                                     <h6 style="font-weight: 700;">
-                                    <?php echo $getFromT->countTweets($profileId); ?>
-                                    <a style="color:rgb(91, 112, 131);">Tweets</a></h6>
+                                    <?php echo $getFromT->countPosts($profileId); ?>
+                                    <a style="color:rgb(91, 112, 131);">Posts</a></h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="space" style="height:10px; width:100%; background:rgba(230, 236, 240, 0.5);">
                     </div>
-                    <!--TWEET WRAP END-->
+                    <!--POST WRAP END-->
 
-                    <!--Tweet SHOW WRAPPER-->
-                    <div class='tweets'>
-                        <?php $getFromT->tweets( $user_id, 100 );
+                    <!--Post SHOW WRAPPER-->
+                    <div class='posts'>
+                        <?php $getFromT->posts( $user_id, 100 );
                         ?>
                     </div>
-                    <!--TWEETS SHOW WRAPPER-->
+                    <!--POSTS SHOW WRAPPER-->
 
                     <div class='loading-div'>
                         <img id='loader' src='assets/images/loading.svg' style='display: none;' />
                     </div>
-                    <div class='popupTweet'></div>
-                    <!--Tweet END WRAPER-->
+                    <div class='popupPost'></div>
+                    <!--Post END WRAPER-->
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/like.js'></script>
-                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/retweet.js'></script>
-                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/popuptweets.js'></script>
+                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/repost.js'></script>
+                    <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/popupposts.js'></script>
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/delete.js'></script>
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/comment.js'></script>
                     <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/popupForm.js'></script>

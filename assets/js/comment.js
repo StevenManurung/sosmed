@@ -1,9 +1,9 @@
 $(function(){
 	$('#postComment').click(function(){
 		var comment = $('#commentField').val();
-		var tweet_id = $('#commentField').data('tweet');
+		var post_id = $('#commentField').data('post');
 
-		$.post('http://localhost/sosmed/core/ajax/comment.php', {comment:comment,tweet_id:tweet_id}, function(data){
+		$.post('http://localhost/sosmed/core/ajax/comment.php', {comment:comment,post_id:post_id}, function(data){
 			$('#comments').html(data);
 			$('#commentField').val('');
 		});

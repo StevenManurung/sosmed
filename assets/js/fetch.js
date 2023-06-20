@@ -7,7 +7,7 @@ $(function(){
 			offset +=10;
 			$('#loader').show();
 			$.post('http://localhost/sosmed/core/ajax/fetchPosts.php', {fetchPost:offset}, function(data){
-				$('.tweets').html(data);
+				$('.posts').html(data);
 				$('#loader').hide();
 			});
 		}

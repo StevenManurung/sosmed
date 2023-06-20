@@ -36,7 +36,7 @@
 ?>
 <html>
 	<head>
-		<title>Password Settings - Twitter</title>
+		<title>Password Settings - Dreamify</title>
 		<meta charset="UTF-8" />
        
        <link rel="shortcut icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/images/bird.svg">
@@ -135,7 +135,7 @@
 	</div>
 	<!--CONTAINER_WRAP ENDS-->
 
-	<div class="popupTweet"></div>
+	<div class="popupPost"></div>
 
         <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/search.js'></script>
         <script type='text/javascript' src='<?php echo BASE_URL;?>assets/js/hashtag.js'></script>
@@ -149,10 +149,10 @@
         <script src='<?php echo BASE_URL;?>assets/js/bootstrap.min.js'></script>
 
         <!-- SCRIPTS -->
-        <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/popuptweets.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/popupposts.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/delete.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/popupForm.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/retweet.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/repost.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/like.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/hashtag.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/search.js"></script>

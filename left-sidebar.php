@@ -46,11 +46,11 @@
                 <!-- <li><a href="<?php echo BASE_URL; ?><?="profile.php?username="?><?php echo $user->username; ?>"><i class="fa fa-user"></i><span>Profile</span></a></li> -->
                 <li><a href='<?php echo BASE_URL; ?>account.php'><i class="fa fa-cog"></i><span>Settings</span></a></li>
                 <li><a href='<?php echo BASE_URL; ?>includes/logout.php'><i class="fa fa-power-off"></i><span>Logout</span></a></li>
-                <li style="padding:10px 40px;"><button class="sidebar_tweet button addTweetBtn" style="outline:none;">Tweet</button></li>
+                <li style="padding:10px 40px;"><button class="sidebar_post button addPostBtn" style="outline:none;">Post</button></li>
                 <?php }?>
                 <?php if ( $getFromU->loggedIn() === false ) {
                 ?>
-                <a href='<?php echo BASE_URL; ?>' style="text-decoration:none;"><li style="padding:10px 40px;"><button class="sidebar_tweet button" style="outline:none;">Login</button></li></a>
+                <a href='<?php echo BASE_URL; ?>' style="text-decoration:none;"><li style="padding:10px 40px;"><button class="sidebar_post button" style="outline:none;">Login</button></li></a>
                 <?php }?>
             </ul>
          <!--    <ul>
