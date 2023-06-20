@@ -28,7 +28,7 @@
     <title>People following <?php echo $profileData->screenName. ' (@'.$profileData->username.')';?></title>
     <meta charset="UTF-8" />
     
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/images/bird.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/images/saveyu.png">
     
     		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
     <link rel='stylesheet' href='<?php echo BASE_URL; ?>assets/css/font-awesome.css' />
