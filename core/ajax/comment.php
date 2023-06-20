@@ -22,7 +22,7 @@
 								<div class="post-show-popup-comment-head-right">
 									  <div class="post-show-popup-comment-name-box">
 									 	<div class="post-show-popup-comment-name-box-name"> 
-									 		<a href="'.BASE_URL.'profile.php?username='.$comment->username.'">'.$comment->screenName.'</a>
+									 		<a href="'.BASE_URL.'profile.php?username='.$comment->username.'">'.$comment->screenName.'sadasd</a>
 									 	</div>
 									 	<div class="post-show-popup-comment-name-box-tname">
 									 		<a href="'.BASE_URL.'profile.php?username='.$comment->username.'">@'.$comment->username.'</a>
@@ -34,13 +34,12 @@
 								 	<div class="post-show-popup-footer-menu">
 										<ul>
 										
-											<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+											
 											'.(($comment->commentBy === $user_id) ?  
 											'<li>
-												<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-												<ul> 
-												  <li><label class="deleteComment" data-post="'.$post->postID.'" data-comment="'.$comment->commentID.'">Delete post</label></li>
-												</ul>
+												
+												  <label class="deleteComment" data-post="'.$post->postID.'" data-comment="'.$comment->commentID.'"><i class="fa fa-trash"></i></label>
+												
 											</li>' : '').'
 										</ul>
 									</div>

@@ -89,7 +89,7 @@ include 'core/init.php';
                                     </a></h6>
                                     <h6 style="font-weight: 700;">
                                     <?php echo $getFromT->countPosts($profileId); ?>
-                                    <a style="color:rgb(91, 112, 131);">Posts</a></h6>
+                                    <a href="<?php echo BASE_URL.'profile.php?username='.$profileData->username; ?>" style="color:rgb(91, 112, 131);">Posts</a></h6>
                                 </div>
                             </div>
                         </div>

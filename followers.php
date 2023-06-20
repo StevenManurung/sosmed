@@ -84,8 +84,8 @@
                                 </div>
                                 <div class="profile-follow mt-2 d-flex">
                                     <h6 class="mr-3 ml-1" style="font-weight: 700;"><?php echo $profileData->following; ?>
-                                        <a href="<?php echo BASE_URL.'followers.php?username='.$profileData->username; ?>/following">
-                                            <a href="<?php echo BASE_URL.$profileData->username; ?>/following" style="color:rgb(91, 112, 131);">Following</a>
+                                        <a href="<?php echo BASE_URL.'following.php?username='.$profileData->username; ?>">
+                                            <a href="<?php echo BASE_URL.'following.php?username='.$profileData->username; ?>" style="color:rgb(91, 112, 131);">Following</a>
                                         </a></h6>
                                     <h6 class="mr-3" style="font-weight: 700;"><?php echo $profileData->followers; ?>
                                         <a href="<?php echo BASE_URL.'followers.php?username='.$profileData->username; ?>" style="color:rgb(91, 112, 131);">
@@ -93,7 +93,7 @@
                                         </a></h6>
                                     <h6 style="font-weight: 700;">
                                         <?php echo $getFromT->countPosts($profileId); ?>
-                                        <a style="color:rgb(91, 112, 131);">Posts</a></h6>
+                                        <a href="<?php echo BASE_URL.'profile.php?username='.$profileData->username; ?>" style="color:rgb(91, 112, 131);">Posts</a></h6>
                                 </div>
                             </div>
                         </div>

@@ -8,6 +8,5 @@
             <div class='search-result'>
             </div>
             
-            <?php $getFromT->trends();?>
             
             <?php $getFromF->whoToFollow( $user_id, $user_id );?>

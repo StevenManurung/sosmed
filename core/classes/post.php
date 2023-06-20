@@ -102,9 +102,9 @@ class Post extends User{
 			      	<div class="t-show-footer">
 			      		<div class="t-s-f-right">
 			      			<ul>
-			      				<li><button style="outline:none;"><i class="fa fa-comment" aria-hidden="true"></i></button></li>
+			      				
 			      				<li>'.((isset($repost['repostID']) ? $post->postID === $repost['repostID'] : '') ? 
-			      					'<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'" style="outline:none;"><i class="fa fa-retweet" aria-hidden="true" style="outline:none;"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>' : 
+			      					'<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'" style="outline:none;"><i class="fa fa-retweet" aria-hidden="true" style="outline:none;color:skyblue"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>' : 
 			      					'<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'" style="outline:none;"><i class="fa fa-retweet" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'
 			      				</li>
 			      				<li>'.((isset($likes['likeOn']) ? $likes['likeOn'] === $post->postID : '') ? 

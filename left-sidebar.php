@@ -15,7 +15,7 @@
 
 ?>
            <div class="sidebar">
-            <div><i class="fa fa-twitter" style="color:#50b7f5;font-size:10px;"></i></div>
+          <div style="margin-bottom:80px;"></div>
             <ul style="list-style:none;">
                 <li >
                 <a href="<?php echo BASE_URL; ?><?="profile.php?username="?><?php echo $user->username;?>" ?>
@@ -24,14 +24,14 @@
                             <img class="sidebar_profile-image" width="60px" height="100%" src=<?= BASE_URL.$user->profileImage?> alt="">
                         </div>
                         <div class="sidebar_profile-info">
-                            <p><?=$user->screenName?></p>
-                            <p style="font-size: 10px;color:gray;">@<?=$user->username?></p>
+                            <p style="color: white;"><?=$user->screenName?></p>
+                            <p style="font-size: 10px;color:black;">@<?=$user->username?></p>
                         </div>
                     </div>
                     </a>
             </li>
            
-                <li class="active_menu"><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home" style="color:#50b7f5;"></i><span style="color:#50b7f5;">Home</span></a></li>
+                <li class="active_menu"><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home" style="color: white;"></i><span style="color: white;" >Home</span></a></li>
                 <?php if ( $getFromU->loggedIn() === true ) {
                 ?>
                <!--  <li><a href="<?php echo BASE_URL;?>hashtag.php"><i class="fa fa-hashtag"></i><span>Explore</span></a></li> -->

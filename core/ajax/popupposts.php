@@ -90,18 +90,18 @@
 				<?php 
 					echo '<ul> 
 						'.(($getFromU->loggedIn()) ?   '
-							<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>	
-							<li>'.(((isset($repost['repostID'])) ? $post->postID === $repost['repostID'] OR $user_id === $repost['repostBy'] : '') ? '<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-retweet" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>' : '<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-retweet" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'</li>
+								
+							<li>'.(((isset($repost['repostID'])) ? $post->postID === $repost['repostID'] OR $user_id === $repost['repostBy'] : '') ? '<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i style="color:skyblue;" class="fa fa-retweet" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>' : '<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-retweet" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'</li>
 							<li>'.(((isset($likes['likeOn'])) ? $likes['likeOn'] == $post->postID : '') ? '<button class="unlike-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '' ).'</span></button>' : '<button class="like-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>').'</li>
 							'.(($post->postBy === $user_id) ? ' 
 							<li>
-								<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+								<a href="" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
 								<ul> 
 								  <li><label class="deletePost" data-post="'.$post->postID.'">Delete Post</label></li>
 								</ul>
 							</li>' : '').'
 						' : '
-							<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>	
+								
 							<li><button><i class="fa fa-retweet" aria-hidden="true"></i></button></li>	
 							<li><button><i class="fa fa-heart-o" aria-hidden="true"></i></button></li>	
 						').'
@@ -165,13 +165,12 @@
 								 	<div class="post-show-popup-footer-menu">
 										<ul>
 										
-											<li><button><i class="fa fa-heart-o" aria-hidden="true"></i></button></li>
+										
 											'.(($comment->commentBy === $user_id) ?  
 											'<li>
-												<a href="#" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-												<ul> 
-												  <li><label class="deleteComment" data-post="'.$post->postID.'" data-comment="'.$comment->commentID.'">Delete Post</label></li>
-												</ul>
+												
+												  <label class="deleteComment" data-post="'.$post->postID.'" data-comment="'.$comment->commentID.'"><i class="fa fa-trash"/></label>
+												
 											</li>' : '').'
 										</ul>
 									</div>

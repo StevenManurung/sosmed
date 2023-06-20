@@ -40,14 +40,14 @@
                 <a><?php echo $post->screenName;?> </a><span>‏@<?php echo $post->username . ' ' . $post->postedOn;?></span>
                </div>
                <div class="repost-popup-comment-body">
-                 <?php echo $post->status . ' ' .$post->postImage;?>
+                 <?php echo $post->status;?>
                </div>
              </div>
           </div>
          </div>
       </div>
       <div class="repost-popup-footer"> 
-        <div class="repost-popup-footer-right">
+        <div style="display: flex; align-items:center;" class="repost-popup-footer-right">
           <button class="cancel-it f-btn">Cancel</button><button class="delete-it" data-post="<?php echo $post->postID;?>" type="submit">Delete</button>
         </div>
       </div>

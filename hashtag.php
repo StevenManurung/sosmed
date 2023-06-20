@@ -141,8 +141,8 @@
 				 	<div class="hash-img-flex-footer">
 				 		<ul>
 				 		'.(($getFromU->loggedIn()) ?   '
-									<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>	
-									<li>'.(((isset($repost['repostID'])) ? $post->postID === $repost['repostID'] OR $user_id === $repost['repostBy'] : '') ? '<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>' : '<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'</li>
+										
+									<li>'.(((isset($repost['repostID'])) ? $post->postID === $repost['repostID'] OR $user_id === $repost['repostBy'] : '') ? '<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i style="color:skyblue" class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>' : '<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'</li>
 									<li>'.(((isset($likes['likeOn'])) ? $likes['likeOn'] == $post->postID : '') ? '<button class="unlike-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>' : '<button class="like-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>').'</li>
 									'.(($post->postBy === $user_id) ? ' 
 									<li>
@@ -152,7 +152,7 @@
 										</ul>
 									</li>' : '').'
 								' : '
-									<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>	
+										
 									<li><button><i class="fa fa-repost" aria-hidden="true"></i></button></li>	
 									<li><button><i class="fa fa-heart-o" aria-hidden="true"></i></button></li>	
 								').'
@@ -294,8 +294,8 @@
 							<div class="t-s-f-right">
 								<ul> 
 								'.(($getFromU->loggedIn()) ?   '
-									<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>	
-									<li>'.(((isset($repost['repostID'])) ? $post->postID === $repost['repostID'] OR $user_id === $repost['repostBy'] : '') ? '<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>' : '<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'</li>
+										
+									<li>'.(((isset($repost['repostID'])) ? $post->postID === $repost['repostID'] OR $user_id === $repost['repostBy'] : '') ? '<button class="reposted" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i style="color:skyblue" class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>' : '<button class="repost" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-repost" aria-hidden="true"></i><span class="repostsCount">'.(($post->repostCount > 0) ? $post->repostCount : '').'</span></button>').'</li>
 									<li>'.(((isset($likes['likeOn'])) ?  $likes['likeOn'] 	== $post->postID : '') ? 
 										'<button class="unlike-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>' : 
 										'<button class="like-btn" data-post="'.$post->postID.'" data-user="'.$post->postBy.'"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="likesCounter">'.(($post->likesCount > 0) ? $post->likesCount : '').'</span></button>').'
@@ -309,7 +309,7 @@
 											</ul>
 										</li>' : '').'
 								' : '
-									<li><button><i class="fa fa-share" aria-hidden="true"></i></button></li>	
+										
 									<li><button><i class="fa fa-repost" aria-hidden="true"></i></button></li>	
 									<li><button><i class="fa fa-heart-o" aria-hidden="true"></i></button></li>	
 								').'
