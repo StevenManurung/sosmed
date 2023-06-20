@@ -31,7 +31,7 @@ if(isset($_POST['next'])){
   <!doctype html>
   <html>
   	<head>
-  		<title>twitter</title>
+  		<title>saveyu</title>
   		<meta charset="UTF-8" />
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
@@ -43,12 +43,12 @@ if(isset($_POST['next'])){
   <body>
   <div class="wrapper">
   <!-- nav wrapper -->
-  <div class="nav-wrapper">
+  <div style="background:gray" class="nav-wrapper">
 
-  	<div class="nav-container">
+  	<div  class="nav-container">
   		<div class="nav-second">
   			<ul>
-  				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"style="color:white;"></i></a></li>
+  				<li><a href="#"><img width="50px" height="50px" src="<?=BASE_URL.'/assets/images/saveyu.png'?>" alt=""></i></a></li>
   			</ul>
   		</div><!-- nav second ends-->
   	</div><!-- nav container ends -->
@@ -85,7 +85,7 @@ if(isset($_POST['next'])){
   	<div class='lets-wrapper'>
   		<div class='step-letsgo'>
   			<h1>We're glad you're here, <?php echo $user->screenName; ?> </h1>
-  			<p style="font-size:22px;">Twitter is a constantly updating stream of the coolest, most important news, media, sports, TV, conversations and more--all tailored just for you.</p>
+  			<p style="font-size:22px;">SAVEYU is a constantly updating stream of the coolest, most important news, media, sports, TV, conversations and more--all tailored just for you.</p>
   			<br>
   			<p style="font-size:22px;">
   				Tell us about all the stuff you love and we'll help you get set up.
