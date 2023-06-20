@@ -74,7 +74,7 @@
 
         <div class="main">
 
-            <p class="page_title mb-0"><i class="fa fa-pencil-square-o mr-4" style="color:#50b7f5;"></i>Edit Profile</p>
+            <p class="page_title mb-0"><i class="fa fa-pencil-square-o mr-4" style="color: black;"></i>Edit Profile</p>
 
             <div class='profile-box'>
                 <div class='profile-cover mt-0'>

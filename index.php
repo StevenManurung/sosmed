@@ -64,13 +64,14 @@
                     <div class="right col-md-6 col-12">
 
                         <?php include 'includes/login.php';?>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
 
-                        <div class="middle">
-                            <i class="fa fa-twitter" style="font-size:50px;"></i>
-                            <h1>See what's happening in<br />the world right now</h1>
-                            <span>Join Dreamify today.</span>
+                        <div class="middle" ">
+                            <span style="font-size: 22px">Register</span>
                         </div>
-
                         <?php include 'includes/signup-form.php';?>
 
                     </div>

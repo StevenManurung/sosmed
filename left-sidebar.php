@@ -24,19 +24,19 @@
                             <img class="sidebar_profile-image" width="60px" height="100%" src=<?= BASE_URL.$user->profileImage?> alt="">
                         </div>
                         <div class="sidebar_profile-info">
-                            <p style="color: white;"><?=$user->screenName?></p>
-                            <p style="font-size: 10px;color:black;">@<?=$user->username?></p>
+                            <p style="color: black;"><?=$user->screenName?></p>
+                            <p style="font-size: 10px;color:black; align-items:center">@<?=$user->username?></p>
                         </div>
                     </div>
                     </a>
             </li>
            
-                <li class="active_menu"><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home" style="color: white;"></i><span style="color: white;" >Home</span></a></li>
+                <li class="active_menu"><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home" style="color: black;"></i><span style="color: black;" >Home</span></a></li>
                 <?php if ( $getFromU->loggedIn() === true ) {
                 ?>
                <!--  <li><a href="<?php echo BASE_URL;?>hashtag.php"><i class="fa fa-hashtag"></i><span>Explore</span></a></li> -->
 
-                <li><a href="<?php echo BASE_URL;?>notification.php"><i class="fa fa-bell" aria-hidden="true"></i><span>Notifications</span><span id="notificaiton" class="ml-0"><?php if($notify->totalN > 0){echo '<span class="span-i">'.$notify->totalN.'</span>';}?></span></a></li>
+                <li><a href='<?php echo BASE_URL; ?>notification.php'><i class="fa fa-bell" aria-hidden="true"></i><span>Notifications</span><span id="notificaiton" class="ml-0"><?php if($notify->totalN > 0){echo '<span class="span-i">'.$notify->totalN.'</span>';}?></span></a></li>
                 
                 <li id='messagePopup'><a><i class="fa fa-envelope" aria-hidden='true'></i><span>Messages</span><span id='messages'>
                             <?php if ( $notify->totalM > 0 ) {

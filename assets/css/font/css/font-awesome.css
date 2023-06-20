@@ -366,6 +366,7 @@
 .fa-image:before,
 .fa-picture-o:before {
   content: "\f03e";
+  color: black;
 }
 .fa-pencil:before {
   content: "\f040";
