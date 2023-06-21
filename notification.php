@@ -117,7 +117,7 @@
                                     <div class="noti-footer-inner">
                                         <div class="noti-footer-inner-left">
                                             <div class="t-h-c-name">
-                                                <span><a href="<?php echo BASE_URL.$user->username;?>"><?php echo $user->username;?></a></span>
+                                                <span><a href="<?php echo BASE_URL.'profile.php?username='.$user->username;?>"><?php echo $user->username;?></a></span>
                                                 <span>@<?php echo $user->username;?></span>
                                                 <span><?php echo $getFromU->timeAgo($data->postedOn);?></span>
                                             </div>
@@ -201,7 +201,7 @@
 									</div>
 									<div class="t-s-head-co	ntent">
 										<div class="t-h-c-name">
-											<span><a href="'.BASE_URL.$post->username.'">'.$post->screenName.'</a></span>
+											<span><a href="'.BASE_URL.'profile.php?username='.$post->username.'">'.$post->screenName.'</a></span>
 											<span>Mentioned you - </span>
 											<span>'.$getFromT->timeAgo($post->postedOn).'</span>
 										</div>
