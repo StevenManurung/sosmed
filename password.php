@@ -24,7 +24,7 @@
 				}else{
 					$getFromU->update('users', $user_id, array('password' => md5($newPassword)));
 //					header('Location:'.$user->username);
-					header('Location:'.BASE_URL.'settings/password.php');
+					header('Location:'.BASE_URL.'password.php');
 				}
 			}else{
 				$error['currentPwd'] = "Password does not match";

@@ -26,7 +26,7 @@ if ( isset( $_POST['submit'] ) ) {
 //        } 
             else {
             $getFromU->update( 'users', $user_id, array( 'username' => $username));
-            header( 'Location:'.BASE_URL.'settings/account.php' );
+            header( 'Location:'.BASE_URL.'account.php' );
         }
     } else {
         $error['fields']  = 'Please fill all the fields';
