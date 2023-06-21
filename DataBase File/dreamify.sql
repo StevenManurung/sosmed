@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2023 at 03:29 PM
+-- Generation Time: Jun 21, 2023 at 09:10 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -109,7 +109,6 @@ INSERT INTO `follow` (`followID`, `sender`, `receiver`, `followOn`) VALUES
 (25, 8, 2, '2023-06-18 18:35:19'),
 (26, 8, 1, '2023-06-18 18:35:20'),
 (33, 7, 8, '2023-06-18 19:45:25'),
-(35, 7, 6, '2023-06-18 19:45:27'),
 (36, 7, 1, '2023-06-20 10:07:19');
 
 -- --------------------------------------------------------
@@ -143,8 +142,8 @@ INSERT INTO `likes` (`likeID`, `likeBy`, `likeOn`) VALUES
 (26, 7, 34),
 (27, 7, 38),
 (28, 7, 37),
-(29, 7, 39),
-(30, 7, 49);
+(30, 7, 49),
+(31, 7, 39);
 
 -- --------------------------------------------------------
 
@@ -178,7 +177,8 @@ INSERT INTO `messages` (`messageID`, `message`, `messageTo`, `messageFrom`, `mes
 (12, 'hello kartik', 2, 6, '2023-06-17 19:11:01', 0),
 (13, 'what', 6, 7, '2023-06-17 19:18:03', 1),
 (14, 'hey', 6, 7, '2023-06-17 19:18:14', 1),
-(15, 'what', 7, 6, '2023-06-17 19:19:04', 1);
+(15, 'what', 7, 6, '2023-06-17 19:19:04', 1),
+(17, 'hi', 2, 6, '2023-06-21 09:06:17', 0);
 
 -- --------------------------------------------------------
 
@@ -280,7 +280,8 @@ INSERT INTO `notification` (`ID`, `notificationFor`, `notificationFrom`, `target
 (77, 7, 7, 22, 'repost', '2023-06-20 11:16:41', 1),
 (78, 7, 7, 36, 'repost', '2023-06-20 11:17:58', 1),
 (79, 7, 7, 34, 'repost', '2023-06-20 11:18:13', 1),
-(80, 6, 7, 39, 'like', '2023-06-20 11:18:21', 1);
+(80, 6, 7, 39, 'like', '2023-06-20 11:18:21', 1),
+(81, 6, 7, 39, 'like', '2023-06-20 18:20:08', 1);
 
 -- --------------------------------------------------------
 
@@ -306,10 +307,6 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`postID`, `status`, `postBy`, `repostID`, `repostBy`, `postImage`, `likesCount`, `repostCount`, `postedOn`, `repostMsg`) VALUES
-(1, 'Day 6 of #100daysofcode Learned about Recursions and Recursive Function. Done Problems on Fibonacci series &amp; Factorial. Need More Focus on Building Logic, Problem solving and thinking ability. #codingnewbies #coding #problemsolvingskills #programming', 4, 0, 0, 'users/code.jpg', 0, 0, '2021-04-28 09:33:19', ''),
-(2, 'Let’s go to #GoogleIO!\r\n\r\n#GoogleIO brings together developers from around the world for thoughtful discussions, interactive learning with Google experts and a first look at Google’s latest developer products.\r\n\r\nDetails → https://goo.gle', 4, 0, 0, 'users/google.png', 0, 1, '2021-04-28 09:43:21', ''),
-(3, 'We are all excited for the #IndiaFacultySummit! Connect with #Google experts, get inspired, and expand your knowledge on Google technologies. Block your dates: April 23rd, 10:00 AM to 12:30 PM IST Have you registered for it? If not, register here https://goo.gle', 4, 0, 0, '', 1, 0, '2021-04-28 09:44:49', ''),
-(4, 'Developed a web Application &quot;Twitter - The Social Media Platform&quot; with @nikhil01 It is a platform where user can interact with each other, share their thoughts, and messages known as #tweets. Frontend: #HTML #CSS #javaScript Backend: #php Framework: #Bootstrap Database: #MySql', 5, 0, 0, '', 0, 0, '2021-04-28 09:47:45', ''),
 (7, 'k', 6, 0, 0, 'users/er2.png', 1, 2, '2023-06-13 19:40:02', ''),
 (8, 'k', 6, 7, 6, 'users/er2.png', 1, 2, '2023-06-13 19:40:02', 'sadm'),
 (9, 'k', 6, 7, 7, 'users/er2.png', 0, 2, '2023-06-13 19:40:02', 'kcna;nc'),
@@ -322,20 +319,14 @@ INSERT INTO `posts` (`postID`, `status`, `postBy`, `repostID`, `repostBy`, `post
 (16, 'asdn', 7, 14, 6, '', 1, 2, '2023-06-13 19:47:23', 's'),
 (17, 'skdnpasd', 7, 0, 0, '', 1, 0, '2023-06-14 14:04:25', ''),
 (18, '#Google', 7, 0, 0, '', 2, 0, '2023-06-14 14:04:58', ''),
-(19, 'Let’s go to #GoogleIO!\r\n\r\n#GoogleIO brings together developers from around the world for thoughtful discussions, interactive learning with Google experts and a first look at Google’s latest developer products.\r\n\r\nDetails → https://goo.gle', 4, 2, 7, 'users/google.png', 0, 2, '2021-04-28 09:43:21', 'Hai boss'),
-(20, 'Let’s go to #GoogleIO!\r\n\r\n#GoogleIO brings together developers from around the world for thoughtful discussions, interactive learning with Google experts and a first look at Google’s latest developer products.\r\n\r\nDetails → https://goo.gle', 4, 19, 6, 'users/google.png', 0, 3, '2021-04-28 09:43:21', 's'),
 (21, 'j', 7, 0, 0, '', 0, 0, '2023-06-15 10:04:14', ''),
 (22, 's', 7, 0, 0, 'users/er2.png', 0, 1, '2023-06-15 10:20:55', ''),
-(23, 'Say My Name', 7, 0, 0, 'users/breaking-bad-tv-show.jpg', 0, 1, '2023-06-15 10:28:06', ''),
-(24, 'Let’s go to #GoogleIO!\r\n\r\n#GoogleIO brings together developers from around the world for thoughtful discussions, interactive learning with Google experts and a first look at Google’s latest developer products.\r\n\r\nDetails → https://goo.gle', 4, 20, 7, 'users/google.png', 0, 4, '2021-04-28 09:43:21', 'g'),
+(23, 'Say My Name', 7, 0, 0, 'users/breaking-bad-tv-show.jpg', 4, 1, '2023-06-15 10:28:06', ''),
 (25, 'Say My Name', 7, 23, 7, 'users/breaking-bad-tv-show.jpg', 0, 2, '2023-06-15 10:28:06', 'Goddamn Right'),
 (26, 'Say My Name', 7, 25, 6, 'users/breaking-bad-tv-show.jpg', 0, 2, '2023-06-15 10:28:06', 'x'),
-(27, 'Let’s go to #GoogleIO!\r\n\r\n#GoogleIO brings together developers from around the world for thoughtful discussions, interactive learning with Google experts and a first look at Google’s latest developer products.\r\n\r\nDetails → https://goo.gle', 4, 24, 6, 'users/google.png', 1, 5, '2021-04-28 09:43:21', 's'),
 (28, 'asdn', 7, 13, 6, '', 2, 2, '2023-06-13 19:47:23', 'd'),
 (29, 'sajdks', 7, 12, 6, '', 2, 1, '2023-06-13 19:47:13', 'd'),
 (30, '@kartik001\r\nhey', 7, 11, 6, '', 2, 1, '2023-06-13 19:45:41', 'd'),
-(31, 'Let’s go to #GoogleIO!\r\n\r\n#GoogleIO brings together developers from around the world for thoughtful discussions, interactive learning with Google experts and a first look at Google’s latest developer products.\r\n\r\nDetails → https://goo.gle', 4, 27, 7, 'users/google.png', 0, 6, '2021-04-28 09:43:21', 's'),
-(32, 'Let’s go to #GoogleIO!\r\n\r\n#GoogleIO brings together developers from around the world for thoughtful discussions, interactive learning with Google experts and a first look at Google’s latest developer products.\r\n\r\nDetails → https://goo.gle', 4, 31, 6, 'users/google.png', 1, 7, '2021-04-28 09:43:21', 'haiya'),
 (33, '', 7, 0, 0, 'users/mrbeast.jfif', 0, 0, '2023-06-15 19:55:13', ''),
 (34, '', 7, 0, 0, 'users/images.jfif', 1, 1, '2023-06-15 20:02:58', ''),
 (36, 'def', 7, 0, 0, 'users/breaking-bad-tv-show.jpg', 0, 1, '2023-06-15 20:06:16', ''),
@@ -406,9 +397,11 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `screenName`, `
 (3, 'naman1999', 'naman@gmail.com', '98c8bc837481b93acfb0deef65e50127', 'Naman Jain', 'users/avtar2.jpg', 'users/Dev wallpaper 2.jpg', 0, 5, 'UI/UX Designer | Website Designer', 'India', 'www.naman.com'),
 (4, 'nikhil01', 'nikhil@gmail.com', '350d89c1cd6592bbbd1ed2e8a4f3ddba', 'Nikhil Yadav', 'users/avtar.png', 'users/code.jpg', 2, 4, 'Software Developer | Freelancer', 'India', 'www.nikhil.com'),
 (5, 'yashgaur908', 'yash@gmail.com', 'e76eb8a75988cb07c8428733a5dd4684', 'Yash Gaur', 'users/avtar1.jpg', 'users/Dev wallpaper.jpg', 2, 2, 'Software Developer | Website Designer', 'India', 'www.yashgaur.tk'),
-(6, 'Kenzie', 'ken@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'Kenzie', 'assets/images/defaultProfileImage.png', 'assets/images/defaultCoverImage.png', 4, 1, '', '', ''),
-(7, 'theniue', 'the@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'the', 'users/breaking-bad-tv-show.jpg', 'users/sc1.png', 7, 2, '', '', ''),
-(8, 'kanakana', 'kena@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'Kenzie', 'assets/images/defaultProfileImage.png', 'assets/images/defaultCoverImage.png', 5, 1, '', '', '');
+(6, 'Kenzies', 'ken@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'Kenzie', 'assets/images/defaultProfileImage.png', 'assets/images/defaultCoverImage.png', 4, 0, '', '', ''),
+(7, 'theniue', 'the@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'thes', 'users/breaking-bad-tv-show.jpg', 'users/sc1.png', 6, 2, '', '', ''),
+(8, 'kanakana', 'kena@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'Kenzie', 'assets/images/defaultProfileImage.png', 'assets/images/defaultCoverImage.png', 5, 1, '', '', ''),
+(9, 'testing', 'tan@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'kne', 'assets/images/defaultProfileImage.png', 'assets/images/defaultCoverImage.png', 0, 0, '', '', ''),
+(10, 'kenzajhs', 'testa@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'testaas', 'assets/images/defaultProfileImage.png', 'assets/images/defaultCoverImage.png', 0, 0, '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -483,19 +476,19 @@ ALTER TABLE `follow`
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `likeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `likeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `messageID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `messageID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `notification`
 --
 ALTER TABLE `notification`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -513,7 +506,7 @@ ALTER TABLE `trends`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
