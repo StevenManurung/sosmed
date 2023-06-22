@@ -79,7 +79,7 @@
 						<div class="acc-wrap">
 							<label class="ml-3" for="">Current Password</label>
 							<div class="form-group col-auto">
-								<input class="form-control" type="password" name="currentPwd"/>
+								<input class="form-control" style="background-color: #1d2226; border: 1px solid #38434f; color: white;" type="password" name="currentPwd"/>
 								<span>
 								<?php if(isset($error['currentPwd'])){echo $error['currentPwd'];}?>
 								</span>
@@ -89,7 +89,7 @@
 						<div class="acc-wrap">
 							<label class="ml-3" for="">New Password</label>
 							<div class="form-group col-auto">
-								<input class="form-control" type="password" name="newPassword"/>
+								<input class="form-control" style="background-color: #1d2226; border: 1px solid #38434f; color: white;" type="password" name="newPassword"/>
 								<span>
 									<?php if(isset($error['newPassword'])){echo $error['newPassword'];}?>
 								</span>
@@ -99,7 +99,7 @@
 						<div class="acc-wrap">
 							<label class="ml-3" for="">Verify Password</label>
 							<div class="form-group col-auto">
-								<input class="form-control" type="password" name="rePassword"/>
+								<input class="form-control" style="background-color: #1d2226; border: 1px solid #38434f; color: white;"type="password" name="rePassword"/>
 								<span>
 									<?php if(isset($error['rePassword'])){echo $error['rePassword'];}?>
 								</span>

@@ -23,6 +23,61 @@ body {
 	outline: none;
 }
 
+.message-send{
+    background-color: #1d2226;
+}
+
+.main-msg-inner{
+    background-color: #1d2226;
+    color: white;
+}
+
+.main-msg-inner{
+    border: none;
+}
+
+.fa-trash{
+    color: red;
+}
+
+.message-send2{
+    border: none;
+}
+
+.msg-l{
+    color: white;
+}
+
+.main-msg-footer{
+    background-color: black;
+}
+
+.message-header2{
+    background-color: black;
+}
+
+.message-send{
+    background-color: #1d2226;
+    border: none;
+    color: white;
+}
+
+.form-control{
+    border-radius: 20px;
+    background-color: #1d2226;
+    border: 1px solid #38434f;
+    color: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
+.ml-1{
+    color: white;
+}
+
 .page_title, .mb-0{
     background-color: #1d2226;
 }

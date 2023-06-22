@@ -44,7 +44,7 @@
 
         <?php require 'left-sidebar.php' ?>
 
-        <div class="main" style="background-color: black;">
+        <div class="main" style="background-color: black; border:none;">
             <div class=''>
                 <div class=''>
                     <!--POST WRAPPER-->

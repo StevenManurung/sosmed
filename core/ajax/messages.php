@@ -173,9 +173,9 @@
 				<div class="main-msg-footer">
 					<div class="main-msg-footer-inner form-group">
 						<ul>
-							<li><textarea class="form-control" id="msg" name="msg" cols="100%" placeholder="Write some thing!"></textarea></li>
+							<li><textarea  style="background-color: #1d2226; border: 1px solid #38434f; color: white;" class="form-control" id="msg" name="msg" cols="100%" placeholder="Write some thing!"></textarea></li>
 						
-							<li><input class="mt-2"id="send" data-user="<?php echo $messageFrom;?>" type="submit" value="Send"/></li>
+							<li><input style="background-color: #1d2226; border: 1px solid #38434f; color: white;" class="mt-2"id="send" data-user="<?php echo $messageFrom;?>" type="submit" value="Send"/></li>
 						</ul>
 					</div>
 				</div>
