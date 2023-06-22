@@ -23,6 +23,10 @@ body {
 	outline: none;
 }
 
+.notification-wrapper{
+    background-color: #1d2226;
+}
+
 .message-send{
     background-color: #1d2226;
 }

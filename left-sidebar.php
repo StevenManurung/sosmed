@@ -1,4 +1,4 @@
-<?php
+?php
  if (isset($_GET['username']) === true && empty($_GET['username']) === false) {
   $username = $getFromU->checkInput($_GET['username']);
   $profileId = $getFromU->userIdByUsername($username);
@@ -36,7 +36,17 @@
                 ?>
                <!--  <li><a href="<?php echo BASE_URL;?>hashtag.php"><i class="fa fa-hashtag"></i><span>Explore</span></a></li> -->
 
-                <li><a href='<?php echo BASE_URL; ?>notification.php'><i class="fa fa-bell" aria-hidden="true"></i><span>Notifications</span><span id="notificaiton" class="ml-0"><?php if($notify->totalN > 0){echo '<span class="span-i">'.$notify->totalN.'</span>';}?></span></a></li>
+                <li><a href='<?php echo BASE_URL; ?>notification.php'><i class="fa fa-bell" aria-hidden="true"></i><span>Notifications</span><span id="notificaiton" class="ml-0"><?php if($notify->totalN > 0){echo '<span 
+                    style="    background: #6dbeef;
+                    padding: 1px 10px;
+                    border-radius: 7px;
+                    border: 2px solid #fff;
+                    color: #fff;
+                    position: relative;
+                    right: 0px;
+                    top: -1px;
+                    font-size: 14px;"
+                    class="span-i">'.$notify->totalN.'</span>';}?></span></a></li>
                 
                 <li id='messagePopup'><a><i class="fa fa-envelope" aria-hidden='true'></i><span>Messages</span><span id='messages'>
                             <?php if ( $notify->totalM > 0 ) {

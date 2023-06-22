@@ -47,7 +47,10 @@
 
                     <!--NOTIFICATION WRAPPER FULL WRAPPER-->
                     <p class="page_title mb-0" style="background-color: #1d2226; color:white;">Notifications</p>
-                    <div class="notification-full-wrapper">
+                    <div class="space" style="height:10px; width:100%; background-color:black; border:none;">
+                </div>
+                
+                    <div class="notification-full-wrapper" style="border-radius:20px;">
 <!-- 
                         <div class="notification-full-head">
                             <div>
@@ -64,7 +67,7 @@
                         <?php if($data->type == 'follow') :?>
                         <!-- Follow Notification -->
                         <!--NOTIFICATION WRAPPER-->
-                        <div class="notification-wrapper">
+                        <div class="notification-wrapper" style="background-color: #1d2226; border:none; ">
                             <div class="notification-inner">
                                 <div class="notification-header">
 
