@@ -60,7 +60,7 @@
 								<div class="people-img">
 									<img src="<?php echo BASE_URL.$message->profileImage;?>"/>
 								</div>
-								<div class="name-right2">
+								<div class="name-right2" style="color: white;">
 									<span><a href=<?=BASE_URL.'profile.php?username='.$message->username?>><?php echo $message->screenName;?></a></span><span>@<?php echo $message->username;?></span>
 								</div>
 								
@@ -85,13 +85,13 @@
 			<script type="text/javascript" src="<?php echo BASE_URL;?>/assets/js/search.js"></script>
  			 
 				<input id="mass" type="checkbox" checked="unchecked" />
-				<div class="back">
+				<div class="back" style="background-color: #1d2226; border: none;">
 					<div class="back-header">
 						<div class="back-left">
 							Direct message
 						</div>
 						<div class="back-right">
-							<label for="mass"  class="new-message-btn">New messages</label>
+							<label for="mass"  class="new-message-btn" style="background-color: white; color: black; border-radius: 20px;">New messages</label>
 							<label for="popup-message-post"><i class="fa fa-times" aria-hidden="true"></i></label>
 						</div>
 					</div>

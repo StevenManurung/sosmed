@@ -14,24 +14,24 @@
 }
 
 ?>
-           <div class="sidebar">
-          <div style="margin-bottom:80px;"></div>
-            <ul style="list-style:none;">
-                <li >
+        <div class="sidebar" style="background-color: black; border: none;">
+        <div style="margin-bottom:80px;"></div>
+            <ul class="side-bar">
+                <li>
                 <a href="<?php echo BASE_URL; ?><?="profile.php?username="?><?php echo $user->username;?>" ?>
                     <div class="sidebar_profile-box">
                         <div style="margin-right: 5px;">
-                            <img class="sidebar_profile-image" width="60px" height="100%" src=<?= BASE_URL.$user->profileImage?> alt="">
+                            <img  class="sidebar_profile-image" width="60px" height="100%" src=<?= BASE_URL.$user->profileImage?> alt="">
                         </div>
                         <div class="sidebar_profile-info">
-                            <p style="color: black;"><?=$user->screenName?></p>
-                            <p style="font-size: 10px;color:black; align-items:center">@<?=$user->username?></p>
+                            <p><?=$user->screenName?></p>
+                            <p style="font-size: 10px; align-items:center; color: #5b7083">@<?=$user->username?></p>
                         </div>
                     </div>
                     </a>
-            </li>
+                </li>
            
-                <li class="active_menu"><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home" style="color: black;"></i><span style="color: black;" >Home</span></a></li>
+                <li><a href='<?php echo BASE_URL; ?>home.php'><i class="fa fa-home"></i><span>Home</span></a></li>
                 <?php if ( $getFromU->loggedIn() === true ) {
                 ?>
                <!--  <li><a href="<?php echo BASE_URL;?>hashtag.php"><i class="fa fa-hashtag"></i><span>Explore</span></a></li> -->
@@ -46,31 +46,10 @@
                 <!-- <li><a href="<?php echo BASE_URL; ?><?="profile.php?username="?><?php echo $user->username; ?>"><i class="fa fa-user"></i><span>Profile</span></a></li> -->
                 <li><a href='<?php echo BASE_URL; ?>account.php'><i class="fa fa-cog"></i><span>Settings</span></a></li>
                 <li><a href='<?php echo BASE_URL; ?>includes/logout.php'><i class="fa fa-power-off"></i><span>Logout</span></a></li>
-                <li style="padding:10px 40px;"><button class="sidebar_post button addPostBtn" style="outline:none;">Post</button></li>
                 <?php }?>
                 <?php if ( $getFromU->loggedIn() === false ) {
                 ?>
                 <a href='<?php echo BASE_URL; ?>' style="text-decoration:none;"><li style="padding:10px 40px;"><button class="sidebar_post button" style="outline:none;">Login</button></li></a>
                 <?php }?>
-            </ul>
-         <!--    <ul>
-               <?php if ( $getFromU->loggedIn() === true ) {
-                ?>
-                <div class="media" style="margin-top:150px;">
-                    <li class="media-inner">
-                        <a href="<?php echo BASE_URL.$user->username; ?>">
-                            <img class="mr-1" src="<?php echo BASE_URL;?><?php echo $user->profileImage; ?>" style="height:40px; width:40px; border-radius:50%;" />
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">
-                                    <a href="<?php echo $user->username; ?>"><span><?php echo '<b>' . $user->screenName . '</b>';
-                    ?></span></a>
-                                </h5>
-                                <span class="text-muted"><?php echo "@".$user->username;
-                    ?></span>
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <?php } ?>
-            </ul> -->
+                </ul>
         </div>
