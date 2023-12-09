@@ -23,6 +23,10 @@ body {
 	outline: none;
 }
 
+.t-h-c-name, .media-body{
+	color: white;
+}
+
 .notification-wrapper{
     background-color: #1d2226;
 }
